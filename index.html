@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовое задание</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container wrapper">
+            <nav class="menu">
+                <ul>
+                    <li><a href="#!">Изображения</a></li>
+                    <li><a href="#!">Видео</a></li>
+                    <li><a href="#!">3D модели</a></li>
+                </ul>
+            </nav>
+
+            <a href="#!" class="btn" id="open-form">Войти</a>
+
+            <div class="menu-button"></div>
+        </div>
+    </header>
+
+    <div class="header-place"></div>
+
+    <main class="main">
+        <section class="welcome">
+            <div class="wrapper"></div>
+            <div class="welcome__content wrapper">
+                <h1>Превратите свои идеи в&nbsp;реальные достижения</h1>
+                <p>Теперь у вас под рукой всегда есть нужные изображения, видео, музыка, 3D-модели, редакционные материалы и авторские продукты.</p>
+            </div>
+        </section>
+
+        <section class="images wrapper">
+            <div class="images__col">
+                <img src="./img/img1.webp" alt="Image1">
+                <img src="./img/img4.webp" alt="Image4">
+            </div>
+
+            <div class="images__col">
+                <img src="./img/img2.webp" alt="Image2">
+                <img src="./img/img5.webp" alt="Image5">
+            </div>
+
+            <div class="images__col">
+                <img src="./img/img3.webp" alt="Image3">
+                <img src="./img/img6.webp" alt="Image6">
+            </div>
+        </section>
+
+        <section class="video">
+            <h2>Поможем сделать ваш продукт уникальным</h2>
+
+            <div class="video__main">
+                <img src="./img/video-player.webp" alt="Main Video">
+            </div>
+
+            <div class="video__other">
+                <div class="preview">
+                    <div class="preview__video">
+                        <img src="./img/preview1.webp" alt="">
+                    </div>
+
+                    <div class="preview__description">
+                        <h3>эксклюзив</h3>
+                        <p>Используйте уникальный контент в своих целях</p>
+                    </div>
+                </div>
+
+                <div class="preview">
+                    <div class="preview__video">
+                        <img src="./img/preview2.webp" alt="">
+                    </div>
+
+                    <div class="preview__description">
+                        <h3>высокое качество</h3>
+                        <p>Изображения и видео в высочайшем качестве</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="create">
+            <div class="create__background"></div>
+
+            <div class="create-container wrapper">
+                <div class="create__description">
+                    <h2>Создавайте свои сайты в пару кликов</h2>
+                    <p>Мы создали новый продукт, который поможет дизайнерам, разработчикам и небольшим стартапам создать свой сайт быстро и просто.</p>
+                    <a href="#!" class="btn">Подробнее</a>
+                </div>
+
+                <div class="create__technologies">
+                    <div class="technology">
+                        <img src="./img/icon-cloud.svg" alt="Bootstrap 4">
+                        <h3>Bootstrap 4</h3>
+                        <p>HTML верстка основана на одном из самых распространенных и надежных фреймворков</p>
+                    </div>
+
+                    <div class="technology">
+                        <img src="./img/icon-html5.svg" alt="HTML5 & CSS3">
+                        <h3>HTML5 & CSS3</h3>
+                        <p>Для достижения наилучшего результата мы использовали только проверенные временем технологии.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="rates">
+            <h2>У нас есть два тарифа</h2>
+
+            <div class="rates__period">
+                <p>Месяц</p>
+                <div class="switch-btn">
+                    <input type="checkbox" name="switch-period" id="switch-period" checked>
+                    <label for="switch-period"></label>
+                </div>
+                <p>Год</p>
+            </div>
+
+            <div class="rates-container">
+                <div class="rate">
+                    <img src="./img/rate1.webp" alt="Оптимальный">
+
+                    <div class="rate-container">
+                        <div class="rate__head">
+                            <h3>Оптимальный</h3>
+                            <div class="price">500 ₽</div>
+                        </div>
+
+                        <div class="rate__description">Редактируйте фото и видео в режиме онлайн. Создавайте одностраничные сайты из готовых компонентов</div>
+
+                        <a href="#!" class="rate__btn">Начать бесплатно</a>
+                    </div>
+
+
+                </div>
+
+                <div class="rate">
+                    <img src="./img/rate2.webp" alt="Профи" />
+
+                    <div class="rate-container">
+                        <div class="rate__head">
+                            <h3>Профи</h3>
+                            <div class="price">1 000 ₽</div>
+                        </div>
+
+                        <div class="rate__description">Редактируйте фото и видео в режиме онлайн. Создавайте одностраничные и многостраничные сайты из готовых компонентов</div>
+
+                        <a href="#!" class="rate__btn">Начать бесплатно</a>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="form" id="form">
+        <div class="form__background"></div>
+
+        <form action="" class="form__content" id="contactForm">
+            <div class="close" id="close-form"></div>
+
+            <h2>Оставить заявку</h2>
+
+            <p>Менеджеры перезвонят или напишут в течение дня. Поможем определиться и протестировать продукт.
+            <br>Без спама и навязчивости</p>
+
+            <div class="form-group" id="formGroup">
+                <div id="emailError" class="form-error">Введите корректный email</div>
+                <input type="email" name="email" id="email" placeholder="Email">
+
+                <input type="text" name="name" id="name" placeholder="Иван Иванов">
+
+                <div id="phoneError" class="form-error">Введите корректный номер телефона</div>
+                <input type="tel" name="tel" id="phone" placeholder="Телефон">
+
+                <input type="submit" value="Отправить" class="btn">
+
+                <div id="form-error"></div>
+
+                <div id="consentError" class="form-error">Для отправки данных необходимо ваше согласие</div>
+                <div class="consent">
+                    <input type="checkbox" name="consent" id="consent"><label for="consent">Я соглашаюсь на обработку персональных данных и присоединяюсь к регламенту СБИС</label>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

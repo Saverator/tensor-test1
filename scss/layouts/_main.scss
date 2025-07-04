@@ -1,0 +1,496 @@
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-bottom: 100px;
+    background: url('../img/basketball.webp') no-repeat center center;
+    background-size: cover;
+    height: 810px;
+
+    @include md-down {
+        height: 582px;
+        padding-bottom: 40px;
+        background-position-x: left;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        color: var(--font-white);
+        width: 100%;
+
+        @include md-down {
+            gap: 16px;
+        }
+
+        @include sm-down {
+            gap: 12px;
+        }
+
+        h1,
+        p {
+            max-width: 770px;
+
+            @include md-down {
+                max-width: 479px;
+            }
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 3.625rem;
+            line-height: 121%;
+            letter-spacing: -0.02em;
+
+            @include md-down {
+                font-size: 2.375rem;
+            }
+
+            @include sm-down {
+                font-size: 2rem;
+            }
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 1.375rem;
+            line-height: 145%;
+
+            @include md-down {
+                font-size: 1.125rem;
+            }
+        }
+    }
+}
+
+.images {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 30px;
+    padding: 100px 20px;
+
+    @include md-down {
+        padding: 40px 20px;
+        gap: 12px;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 30px;
+
+        @include md-down {
+            gap: 12px;
+        }
+    }
+}
+
+.video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 100px 20px;
+    background: var(--background-second);
+
+    @include md-down {
+        padding: 40px 20px;
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: 2.625rem;
+        line-height: 124%;
+        letter-spacing: -0.01em;
+        text-align: center;
+        color: var(--font-white);
+        max-width: 594px;
+        margin-bottom: 40px;
+
+        @include md-down {
+            font-size: 1.75rem;
+            margin-bottom: 24px;
+        }
+
+        @include sm-down {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__main {
+        position: relative;
+        margin-bottom: 56px;
+        cursor: pointer;
+
+        @include md-down {
+            max-width: 604px;
+            margin-bottom: 32px;
+        }
+
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            content: '';
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: url('../img/play.svg') no-repeat center center,
+                        var(--button);
+            transition: all .3s;
+
+            @include md-down {
+                width: 58px;
+                height: 58px;
+                background-size: 16px auto;
+            }
+
+            @include md-down {
+                width: 33px;
+                height: 33px;
+            }
+        }
+
+        &:hover {
+            &::after {
+                background: url('../img/play.svg') no-repeat center center,
+                            var(--button-hover);
+                transition: all .3s;
+            }
+        }
+    }
+
+    &__other {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 30px;
+        width: 970px;
+
+        @include md-down {
+            width: 604px;
+            gap: 12px;
+            justify-content: flex-start;
+        }
+
+        @include sm-down {
+            width: 343px;
+            overflow: hidden;
+        }
+
+        .preview {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: row;
+            gap: 30px;
+
+            @include md-down {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+                max-width: 249px;
+            }
+
+            @include sm-down {
+                width: 195px;
+            }
+
+            &__video {
+                cursor: pointer;
+                position: relative;
+                transition: all .3s;
+
+                &::after {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    translate: -50% -50%;
+                    content: '';
+                    width: 16px;
+                    height: 20px;
+                    background: url('../img/play.svg') no-repeat center center;
+                    transition: all .3s;
+                }
+            }
+
+            &__description {
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: column;
+                gap: 32px;
+                color: var(--font-white);
+
+                @include md-down {
+                    gap: 8px;
+                }
+
+                h3 {
+                    font-weight: 700;
+                    font-size: 0.875rem;
+                    line-height: 186%;
+                    letter-spacing: 0.14em;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+.create {
+    position: relative;
+    height: 852px;
+    padding: 100px 20px;
+
+    @include md-down {
+        height: 614px;
+        padding: 40px 20px;
+    }
+
+    @include sm-down {
+       padding-bottom: 312px;
+       height: auto;
+    }
+
+    &__background {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 35%;
+        background: url('../img/balcons.webp') no-repeat;
+        background-size: cover;
+
+        @include md-down {
+            width: 41%;
+            background-position-x: center;
+        }
+
+        @include sm-down {
+            inset: auto 0 0 0;
+            width: 100%;
+            height: 264px;
+            background-position: center center;
+        }
+    }
+
+    .create-container {
+        width: 100%;
+
+        &>div {
+            max-width: 571px;
+
+            @include md-down {
+                max-width: 55%;
+            }
+
+            @include sm-down {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__description {
+        margin-bottom: 120px;
+
+        @include md-down {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 2.625rem;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--header);
+            margin-bottom: 24px;
+
+            @include md-down {
+                font-size: 1.75rem;
+                margin-bottom: 12px;
+            }
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 1.375rem;
+            line-height: 145%;
+            color: var(--font-second);
+            margin-bottom: 32px;
+
+            @include md-down {
+                font-size: 1.125rem;
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    &__technologies {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 30px;
+
+        @include sm-down {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .technology {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: 54px;
+                height: auto;
+                margin-bottom: 24px;
+
+                @include sm-down {
+                    margin-bottom: 16px;
+                }
+            }
+
+            h3 {
+                font-weight: 500;
+                font-size: 1.375rem;
+                line-height: 145%;
+                color: var(--header);
+                margin-bottom: 7px;
+            }
+
+            p {
+                line-height: 162%;
+                color: var(--font-second);
+            }
+        }
+    }
+}
+
+.rates {
+    padding: 100px 20px;
+    background-color: var(--background-second);
+
+    @include md-down {
+        padding: 40px 20px;
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: 2.625rem;
+        line-height: 100%;
+        letter-spacing: -0.01em;
+        text-align: center;
+        color: var(--font-white);
+        margin-bottom: 40px;
+
+        @include md-down {
+             font-size: 1.75rem;
+             margin-bottom: 24px;
+        }
+
+        @include sm-down {
+             font-size: 1.5rem;
+             margin-bottom: 16px;
+        }
+    }
+
+    &__period {
+        width: fit-content;
+        margin: 0 auto;
+        color: var(--font-white);
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        margin-bottom: 40px;
+
+        @include sm-down {
+             margin-bottom: 24px;
+        }
+    }
+
+    .rates-container {
+        max-width: 770px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 30px;
+
+        @include md-down {
+            gap: 12px;
+        }
+
+        @include md-down {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .rate {
+            width: 370px;
+            color: var(--font-white);
+
+            @include md-down {
+                width: 100%;
+            }
+
+            img {
+                display: block;
+            }
+
+            .rate-container {
+                border: 2px solid #ebeaed;
+                border-radius: 0 0 24px 24px;
+                padding: 40px 32px;
+                height: 332px;
+                display: flex;
+                flex-direction: column;
+                background: #34343d;
+
+                @include sm-down {
+                    padding: 24px 16px;
+                    height: auto;
+                    gap: 16px;
+                }
+            }
+
+            &__head {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+                margin-bottom: 12px;
+
+                @include sm-down {
+                    margin-bottom: 0;
+                }
+
+                h3,
+                .price {
+                    font-weight: 500;
+                    font-size: 1.375rem;
+                    line-height: 145%;
+                }
+            }
+
+            &__btn {
+                margin-top: auto;
+            }
+        }
+    }
+}

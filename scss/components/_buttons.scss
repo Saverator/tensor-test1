@@ -1,0 +1,76 @@
+.btn {
+    border-radius: 100px;
+    padding: 12px 30px;
+    color: var(--font-white);
+    background: var(--button);
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 144%;
+
+    &:hover {
+        background: var(--button-hover);
+    }
+}
+
+.switch-btn {
+  input {
+    display: none;
+
+    &+ label {
+        display: inline-block;
+        width: 57px;
+        height: 30px;
+        border-radius: 22px;
+        background: #bfbfbf;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        position: relative;
+        transition: all .2s;
+
+        &::after {
+            content: "";
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: var(--background);
+            top: 3px;
+            left: 3px;
+            transition: all .2s;
+            position: absolute;
+        }
+    }
+
+    &:checked {
+        + label {
+            background: #25dac5;
+            transition: all .2s;
+
+            &::after {
+                left: 30px;
+                transition: all .2s;
+            }
+        }
+    }
+  }
+}
+
+.rate__btn {
+    outline: 2px solid #ebeaed;
+    border-radius: 100px;
+    padding: 12px 30px;
+    width: 100%;
+    height: 50px;
+    color: var(--font-white);
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 144%;
+    transition: background .3s;
+
+    &:hover {
+        background: #e93a7d;
+        outline: none;
+        transition: background .3s;
+    }
+}

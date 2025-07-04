@@ -1,0 +1,31 @@
+body {
+    font-family: $font-family;
+    font-weight: 400;
+    line-height: 162%;
+    color: var(--font);
+    background-color: var(--background);
+}
+
+.wrapper {
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include sm-down {
+        padding: 0 16px;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--font);
+    transition: all .3s;
+
+    &:hover {
+        transition: all .3s;
+    }
+}
